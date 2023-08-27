@@ -1,3 +1,4 @@
+// Online C++ compiler to run C++ program online
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,11 +24,141 @@ void func2(int n) {
         cout<<endl;
     }
 }
+void func3(int n) {
+    // Write C++ code here
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+void func4(int n) {
+    // Write C++ code here
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<i;
+        }
+        cout<<endl;
+    }
+}
+void func5(int n) {
+    // Write C++ code here
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n-i+1; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+void func6(int n) {
+    // Write C++ code here
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n-i+1; j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+void func7(int n) {
+    // Write C++ code here
+
+    for(int i=0; i<n; i++){
+        // space
+        for(int j=0; j<n-i-1; j++){
+            cout<<" ";
+        }
+        // star
+        for(int j=0; j<2*i+1; j++){
+            cout<<"*";
+        }
+        // space
+        for(int j=0; j<n-i-1; j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+void func8(int n) {
+    // Write C++ code here
+
+    for(int i=0; i<n; i++){
+        // space
+        for(int j=0; j<i; j++){
+            cout<<" ";
+        }
+        // star
+        for(int j=0; j<2*n-(2*i+1); j++){
+            cout<<"*";
+        }
+        // space
+        for(int j=0; j<i; j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+void func9(int n){
+    for(int i=1; i<=2*n-1; i++){
+        int stars = i;
+        if(i > n) stars = 2*n - i;
+        for(int j=1; j<=stars; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+void func10(int n){
+    int start = 1;
+    for(int i=0; i<=n; i++)
+    {
+        if (i % 2 == 0) start = 1;
+        else start = 0;
+        for(int j = 0; j <= i; j++)
+        {
+            cout<<start;
+            start = 1 - start;
+        }
+        cout<<endl;
+    }
+}
+void func11(int n){
+    int space = 2*(n-1);
+    for(int i = 1; i<=n; i++)
+    {
+        for(int j = 1; j <= i; j++)
+        {
+            cout<<j;
+        }
+        for(int j = 1; j<=space; j++)
+        {
+            cout<<" ";
+        }
+        for(int j = i; j>=1; j--)
+        {
+            cout<<j;
+        }
+        cout<<endl;
+        space -=2;
+    }
+}
 int main()
 {
     int n;
     cin>>n;
-    func1(n);
-    func2(n);
-    
+    // func1(n);
+    // func2(n);
+    // func3(n);
+    // func4(n);
+    // func5(n);
+    // func6(n);
+    // func7(n);
+    // func8(n);
+    // func9(n);
+    // func10(n);
+    func11(n);
 }

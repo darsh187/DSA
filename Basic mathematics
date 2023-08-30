@@ -83,16 +83,29 @@ int isPrime(int n)
     if(cnt == 2) return 1;
     else return 0;
 }
+int eugcd(int a, int b)
+{
+    while(a > 0 && b > 0)
+    {
+        if(a > b) a = a % b;
+        else b =  b % a;
+    }
+    if (a == 0) return b;
+    else return a;
+}
 int main()
 {
-    int m;
-    cin >> m;  
+    // int m;
+    // cin >> m;  
+    int a,b;
+    cin >> a >> b;
     // int x = counting(m);
     // int x = revNum(m);
     // int x = checkPalindrome(m);
     // int x = isArmStrongNum(m);
     // allDivisors(m);
-    int x = isPrime(m);
+    // int x = isPrime(m);
+    int x = eugcd(a, b);
     cout << x;
     return 0;
 }

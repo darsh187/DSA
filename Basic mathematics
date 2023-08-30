@@ -48,14 +48,34 @@ int isArmStrongNum(int n)
     if(sum == dup) return true;
     else return false;
 }
+void gcd(int n)
+{
+    vector<int> ls;
+    for(int i = 1; i <= sqrt(n); i++)
+    {
+        if(n % i == 0)
+        {
+            ls.push_back(i);
+            if(n/i != i)
+            {
+                ls.push_back(n/i);
+            }
+        }
+    }
+    sort(ls.begin(), ls.end());
+    for(auto it: ls)
+    {
+        cout << it << " ";
+    }
+}
 int main()
 {
     int m;
-    cin >> m;
+    cin >> m;  
     // int x = counting(m);
     // int x = revNum(m);
     // int x = checkPalindrome(m);
-    int x = isArmStrongNum(m);
-    cout << x;
+    // int x = isArmStrongNum(m);
+    gcd(m);
     return 0;
 }

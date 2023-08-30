@@ -11,12 +11,23 @@ int counting(int n)
     }
     return count;
 }
-
+int revNum(int n)
+{
+    int rev = 0;
+    while(n > 0)
+    {
+        int lastdigit = n % 10;
+        rev = (rev * 10) + lastdigit;
+        n = n / 10;
+    }
+    return rev;
+}
 int main()
 {
     int m;
     cin >> m;
-    int x = counting(m);
+    // int x = counting(m);
+    int x = revNum(m);
     cout << x;
     return 0;
 }

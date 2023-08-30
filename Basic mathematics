@@ -35,13 +35,27 @@ int checkPalindrome(int n)
     if(rev == ogNum) return true;
     else return false;
 }
+int isArmStrongNum(int n)
+{
+    int dup = n;
+    int sum = 0;
+    while(n > 0)
+    {
+        int lastdigit = n % 10;
+        sum = sum + (lastdigit*lastdigit*lastdigit);
+        n = n / 10;
+    }
+    if(sum == dup) return true;
+    else return false;
+}
 int main()
 {
     int m;
     cin >> m;
     // int x = counting(m);
     // int x = revNum(m);
-    int x = checkPalindrome(m);
+    // int x = checkPalindrome(m);
+    int x = isArmStrongNum(m);
     cout << x;
     return 0;
 }
